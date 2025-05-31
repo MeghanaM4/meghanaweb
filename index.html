@@ -33,6 +33,32 @@
 
     <div class="w-full mt-10 max-w-md mx-auto bg-white p-8 border border-gray-300 rounded-lg shadow-lg">
 
+        <button id="aboutmebut" class="hidden btn btn-accent absolute top-0 left-0 m-4"
+            onclick="aboutme.showModal()">About Me</button>
+        <dialog id="aboutme" class="modal">
+            <div class="modal-box">
+                <form method="dialog">
+                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                </form>
+                <h3 class="text-lg font-bold">About Me</h3>
+                </p>
+                <div class="flex space-x-4">
+                    <div>
+                        <p class="py-4">Hey, I'm Meghana. I'm a 16 year old that spends her free time messing around
+                            with robots, making PCBs, and failing to code firmware. I love watching movies, racing,
+                            and hack club.
+                    </div>
+                    <div>
+                        <img src="elements\aboutmepic.jpg" title="me at the zion narrows (I'm looking at nothing)"
+                            alt="picture of me">
+                    </div>
+                </div>
+
+            </div>
+        </dialog>
+
+
+
         <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center">welcome to meghana.co</h2>
 
         <div class="border p-2 border-2 border-green-400 text-center rounded-lg">
@@ -83,7 +109,8 @@
             </div>
 
             <div class="mb-4 break-inside-avoid">
-                <div id='ODYSSEY' class="card bg-base-100 w-96 shadow-sm">
+                <div id='ODYSSEY' class="card bg-base-100 w-96 shadow-sm indicator">
+                    <img src="elements\hclogo.png" class="indicator-item" alt="hack club logo" style="width:30px;height:30px;">
                     <figure>
                         <img src="elements\odyssey.png" alt="Shoes" />
                     </figure>
@@ -103,7 +130,8 @@
             </div>
 
             <div class="mb-4 break-inside-avoid">
-                <div id='MADPAD' class="card bg-base-100 w-96 shadow-sm">
+                <div id='MADPAD' class="card bg-base-100 w-96 shadow-sm indicator">
+                    <img src="elements\hclogo.png" class="indicator-item" alt="hack club logo" style="width:30px;height:30px;">
                     <figure>
                         <img src="elements\madpad.jpg" alt="Shoes" />
                     </figure>
@@ -146,7 +174,8 @@
 
 
             <div class="mb-4 break-inside-avoid">
-                <div id='TRASH TALKING TRASH CAN' class="card bg-base-100 w-96 shadow-sm">
+                <div id='TRASH TALKING TRASH CAN' class="card bg-base-100 w-96 shadow-sm indicator">
+                    <img src="elements\hclogo.png" class="indicator-item" alt="hack club logo" style="width:30px;height:30px;">
                     <figure>
                         <img src="elements\TTTC.jpg" alt="Shoes" />
                     </figure>
@@ -241,19 +270,23 @@
             <h6 class="footer-title">Social</h6>
             <div class="grid grid-flow-col gap-4">
                 <a href="https://www.instagram.com/meghana.four/">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkroh5uCRltTkeXcMkn-czSB6B3TIpqrO_VA&s" alt="instagram logo" style="width:30px;height:30px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkroh5uCRltTkeXcMkn-czSB6B3TIpqrO_VA&s"
+                        alt="instagram logo" style="width:30px;height:30px;">
                 </a>
 
                 <a href="https://www.linkedin.com/in/meghanamad/">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRZy25qVnXim0IHxSZ9q0eQiW3E-NHXxDjuQ&s" alt="linkedin logo" style="width:30px;height:30px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRZy25qVnXim0IHxSZ9q0eQiW3E-NHXxDjuQ&s"
+                        alt="linkedin logo" style="width:30px;height:30px;">
                 </a>
 
                 <a href="https://github.com/meghanam4">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa8FV8SCzjlNqk2yzFPetRZbY7j258d8-MuA&s" alt="github logo" style="width:30px;height:30px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa8FV8SCzjlNqk2yzFPetRZbY7j258d8-MuA&s"
+                        alt="github logo" style="width:30px;height:30px;">
                 </a>
 
                 <a href="https://www.youtube.com/@MeghanaMadiraju">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnLDDjLe1IJo4LXgT9A9b432XvqZxri5Oi3w&s" alt="YouTube logo" style="width:30px;height:30px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnLDDjLe1IJo4LXgT9A9b432XvqZxri5Oi3w&s"
+                        alt="YouTube logo" style="width:30px;height:30px;">
                 </a>
 
                 </a>
@@ -262,7 +295,7 @@
             <p>meghanaamadiraju@gmail.com</h7>
         </nav>
 
-             <aside>
+        <aside>
             <a class="link mt-30" href="https://github.com/meghanam4/meghanaweb">
                 this website is open source!
             </a>
@@ -277,13 +310,13 @@
 
     setTimeout(() => {
         m1.classList.remove('hidden');
-    }, 1000);
+    }, 700);
 
     setTimeout(() => {
         stuff.classList.remove('hidden');
         cards.classList.remove('hidden');
         footer.classList.remove('hidden');
-        aboutme.classList.remove('hidden');
+        aboutmebut.classList.remove('hidden');
 
         const taglines = [
             "Building stuff since... uhh..",
@@ -302,6 +335,6 @@
 
         pickTag();
 
-    }, 2000);
+    }, 1500);
 
 </script>
